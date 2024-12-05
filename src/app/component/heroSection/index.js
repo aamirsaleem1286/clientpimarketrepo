@@ -34,7 +34,7 @@ const Card = ({ icon, title, description }) => {
 
 export default function Home() {
   const iconData = [
-    { icon: <FaComments size={30} />, label: 'Chat' },
+    { icon: <FaComments size={30}  />, label: 'Chat' },
     { icon: <FaWallet size={30} />, label: 'Wallet' },
     { icon: <FaBrain size={30} />, label: 'Brainstorm' },
     { icon: <FaGem size={30} />, label: 'Mine' },
@@ -52,12 +52,13 @@ export default function Home() {
         <h2 className="text-[18px] sm:text-[18px] lg:text-[35px] text-[#f4af47] leading-tight">
         Welcome to the Pi Browser
           </h2>
-          <div className="grid grid-cols-3 gap-y-4 gap-x-4 mt-8 lg:hidden">
+          <div className="grid grid-cols-3 gap-y-4 gap-x-4 mt-8 lg:hidden mx-[15px] my-[5px]">
   {iconData.map((item, index) => (
-    <div key={index} className="flex w-12 h-12 flex-col items-center text-[rgb(138,52,142)]">
+    <div key={index} className="flex w-12 h-20 flex-col items-center text-[rgb(138,52,142)]">
       <div className="border border-black w-12 h-12 rounded-xl flex justify-center items-center">
         {item.icon}
       </div>
+      <p className='mt-[4px] text-[0.7rem]'>{item.label}</p>
     </div>
   ))}
 </div>

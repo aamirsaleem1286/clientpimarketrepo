@@ -49,7 +49,7 @@ export default function Home() {
     <>
  <div className="text-2xl font-bold lg:hidden">
         <Image src="/logo.png" alt="Next.js Logo" width={200} height={120} />
-        <h2 className="text-[18px] sm:text-[18px] lg:text-[35px] text-[#f4af47] leading-tight">
+        <h2 className="mx-3 text-[18px] sm:text-[18px] lg:text-[35px] text-[#f4af47] leading-tight">
         Welcome to the Pi Browser
           </h2>
           <div className="grid grid-cols-3 gap-y-4 gap-x-4 mt-8 lg:hidden mx-[15px] my-[5px]">
@@ -62,13 +62,7 @@ export default function Home() {
     </div>
   ))}
 </div>
-
-
-
-
       </div>
-
-
    <div
   className={`${montserrat.variable} bg-[#8A348E]  h-auto lg:h-[250px] flex items-center justify-center p-6`}
 >

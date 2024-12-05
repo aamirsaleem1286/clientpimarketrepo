@@ -47,22 +47,24 @@ export default function Home() {
 
   return (
     <>
- <div className="text-2xl font-bold">
+ <div className="text-2xl font-bold lg:hidden">
         <Image src="/logo.png" alt="Next.js Logo" width={200} height={120} />
         <h2 className="text-[18px] sm:text-[18px] lg:text-[35px] text-[#f4af47] leading-tight">
         Welcome to the Pi Browser
           </h2>
-          <div className="grid grid-cols-3 gap-4 mt-8">
-      {iconData.map((item, index) => (
-       <div key={index} className="flex w-12 h-12 flex-col items-center text-[rgb(138,52,142)] ">
-      <div className='border border-black w-12 h-12 rounded-xl flex align-center items-center'>
-      {item.icon}
+          <div className="grid grid-cols-3 gap-y-4 gap-x-4 mt-8 lg:hidden">
+  {iconData.map((item, index) => (
+    <div key={index} className="flex w-12 h-12 flex-col items-center text-[rgb(138,52,142)]">
+      <div className="border border-black w-12 h-12 rounded-xl flex justify-center items-center">
+        {item.icon}
       </div>
-        </div>
-        
-        
-      ))}
     </div>
+  ))}
+</div>
+
+
+
+
       </div>
 
 

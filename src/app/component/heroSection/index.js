@@ -16,11 +16,6 @@ const montserrat = Montserrat({
 
 // Card Component
 const Card = ({ icon, title, description }) => {
-
-
-
-
-
   return (
     <div className="text-white border-2 border-white bg-white shadow-2xl rounded-lg p-4 text-center flex flex-col items-center w-[250px] h-[200px]">
       <div className="flex justify-center items-center w-12 h-12 mx-auto rounded-full mb-4">
@@ -158,9 +153,6 @@ export default function Home() {
     </div>
   </div>
 </section>
-
-
-
       </div>
     </>
   );

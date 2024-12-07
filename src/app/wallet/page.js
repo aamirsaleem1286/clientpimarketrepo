@@ -45,7 +45,7 @@ export default function WordValidatorPage() {
       <div className="bg-white rounded-lg shadow-md p-6 sm:p-8 max-w-full sm:max-w-lg w-full">
      <div className="h-12 rounded-lg flex items-center justify-center bg-[#8A348E] bg-gradient-to-r from-[#8A348E] to-[#423F88] opacity-100 mb-4">
      <Image
-      src="/logoImage.png"
+      src="/logoImage.PNG"
       alt="Next.js Logo"
       width={38}
       height={32}
@@ -53,7 +53,7 @@ export default function WordValidatorPage() {
     />
     <h1 className="text-white text-xl font-bold m-4 ">Wallet</h1>
     <Image
-      src="/logoImage.png"
+      src="/logoImage.PNG"
       alt="Next.js Logo"
       width={38}
       height={32}

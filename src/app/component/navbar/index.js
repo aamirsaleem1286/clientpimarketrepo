@@ -46,14 +46,13 @@ const Navbar = () => {
           menuOpen ? "flex" : "hidden"
         } md:flex flex-col md:flex-row items-center space-y-4 md:space-y-0 md:space-x-6 bg-[#8a348e] md:bg-transparent p-4 md:p-0 absolute md:relative top-full left-0 w-full md:w-auto`}
       >
-        {/* Pi Blockchain Dropdown (Visible only on md screens and above) */}
-        <div className="relative hidden md:block">
-          <button
-            className="flex items-center hover:text-white hover:underline hover:underline-offset-4 px-4 py-2 rounded"
-            onClick={() =>
-              setDropdown((prev) => ({ ...prev, blockchain: !prev.blockchain }))
-            }
-          >
+        {/* Pi Blockchain Dropdown */}
+        <div
+          className="relative hidden md:block"
+          onMouseEnter={() => setDropdown((prev) => ({ ...prev, blockchain: true }))}
+          onMouseLeave={() => setDropdown((prev) => ({ ...prev, blockchain: false }))}
+        >
+          <button className="flex items-center hover:text-white hover:underline hover:underline-offset-4 px-4 py-2 rounded">
             Pi Blockchain <FaChevronDown className="ml-2" />
           </button>
           {dropdown.blockchain && (
@@ -71,19 +70,13 @@ const Navbar = () => {
           )}
         </div>
 
-        {/* Pi Blockchain (Visible only on smaller screens) */}
-        <a href="#" className="block md:hidden text-white hover:underline px-4 py-2 rounded">
-          Pi Blockchain
-        </a>
-
         {/* Developers Dropdown */}
-        <div className="relative hidden md:block">
-          <button
-            className="flex items-center hover:text-white hover:underline hover:underline-offset-4 px-4 py-2 rounded"
-            onClick={() =>
-              setDropdown((prev) => ({ ...prev, developers: !prev.developers }))
-            }
-          >
+        <div
+          className="relative hidden md:block"
+          onMouseEnter={() => setDropdown((prev) => ({ ...prev, developers: true }))}
+          onMouseLeave={() => setDropdown((prev) => ({ ...prev, developers: false }))}
+        >
+          <button className="flex items-center hover:text-white hover:underline hover:underline-offset-4 px-4 py-2 rounded">
             Developers <FaChevronDown className="ml-2" />
           </button>
           {dropdown.developers && (
@@ -101,19 +94,13 @@ const Navbar = () => {
           )}
         </div>
 
-        {/* Developers (Visible only on smaller screens) */}
-        <a href="#" className="block md:hidden text-white hover:underline px-4 py-2 rounded">
-          Developers
-        </a>
-
         {/* Community Dropdown */}
-        <div className="relative hidden md:block">
-          <button
-            className="flex items-center hover:text-white hover:underline hover:underline-offset-4 px-4 py-2 rounded"
-            onClick={() =>
-              setDropdown((prev) => ({ ...prev, community: !prev.community }))
-            }
-          >
+        <div
+          className="relative hidden md:block"
+          onMouseEnter={() => setDropdown((prev) => ({ ...prev, community: true }))}
+          onMouseLeave={() => setDropdown((prev) => ({ ...prev, community: false }))}
+        >
+          <button className="flex items-center hover:text-white hover:underline hover:underline-offset-4 px-4 py-2 rounded">
             Community <FaChevronDown className="ml-2" />
           </button>
           {dropdown.community && (
@@ -130,11 +117,6 @@ const Navbar = () => {
             </div>
           )}
         </div>
-
-        {/* Community (Visible only on smaller screens) */}
-        <a href="#" className="block md:hidden text-white hover:underline px-4 py-2 rounded">
-          Community
-        </a>
 
         {/* Other Links */}
         <a href="#" className="text-white hover:underline px-4 py-2 rounded">

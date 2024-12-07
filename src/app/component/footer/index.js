@@ -3,9 +3,9 @@ import Image from 'next/image';
 export default function Footer() {
   return (
    <>
-  <footer className="flex flex-col sm:flex-row justify-between items-center p-6 bg-gray-800 text-white space-y-4 sm:space-y-0">
+  <footer className="flex flex-col sm:flex-row justify-around items-center p-6 bg-gray-800 text-white space-y-4 sm:space-y-0">
   {/* Links Section */}
-  <div className="flex flex-col sm:flex-row gap-4 sm:gap-16">
+  {/* <div className="flex flex-col sm:flex-row gap-4 sm:gap-16"> */}
     {/* Column 1 */}
     <div className="flex flex-col space-y-2 text-center sm:text-left">
       <a href="#link3" className="hover:text-[#8A348E]">
@@ -36,15 +36,15 @@ export default function Footer() {
         Safety Center
       </a>
     </div>
-  </div>
+  {/* </div> */}
 
   {/* Logo Section */}
   <div className="relative">
     <Image
       src="/logo.png"
       alt="Next.js Logo"
-      width={200}
-      height={120}
+      width={350}
+      height={320}
       className="mx-auto sm:mx-0"
     />
   </div>

@@ -88,9 +88,9 @@ export default function Home() {
     <Image
       src="/coin.PNG" 
       alt="Hero Image"
-      width={500}
-      height={300}
-      className="rounded-lg object-cover"
+      width={400}
+      height={380}
+      className="rounded-lg object-contain"
     />
   </div>
 </section>

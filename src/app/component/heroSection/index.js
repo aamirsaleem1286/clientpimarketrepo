@@ -4,8 +4,7 @@ import { FaArrowRight } from "react-icons/fa";
 import { TbWorld } from "react-icons/tb";
 import { TfiMobile } from "react-icons/tfi";
 import { MdOutlineDownloading } from "react-icons/md";
-import { FaComments, FaWallet, FaBrain, FaGem, FaBlockchain, FaCode, FaIdCard, FaFire, FaUser } from 'react-icons/fa';
-import { SiBlockchaindotcom } from "react-icons/si";
+
 
 const montserrat = Montserrat({
   subsets: ['latin'],
@@ -28,38 +27,13 @@ const Card = ({ icon, title, description }) => {
 };
 
 export default function Home() {
-  const iconData = [
-    { icon: <FaComments size={30}  />, label: 'Chat' },
-    { icon: <FaWallet size={30} />, label: 'Wallet' },
-    { icon: <FaBrain size={30} />, label: 'Brainstorm' },
-    { icon: <FaGem size={30} />, label: 'Mine' },
-    { icon: <SiBlockchaindotcom size={30} />, label: 'Blockchain' },
-    { icon: <FaCode size={30} />, label: 'Develop' },
-    { icon: <FaIdCard size={30} />, label: 'KYC' },
-    { icon: <FaFire size={30} />, label: 'FireSide' },
-    { icon: <FaUser size={30} />, label: 'Profile' },
-  ];
+  
 
   return (
     <>
- <div className="text-2xl font-bold lg:hidden">
-        <Image src="/logo.png" alt="Next.js Logo" width={200} height={120} />
-        <h2 className="mx-3 text-[18px] sm:text-[18px] lg:text-[35px] text-[#f4af47] leading-tight">
-        Welcome to the Pi Browser
-          </h2>
-          <div className="grid grid-cols-3 gap-y-4 gap-x-4 mt-8 lg:hidden mx-[15px] my-[5px]">
-  {iconData.map((item, index) => (
-    <div key={index} className="flex w-12 h-20 flex-col items-center text-[rgb(138,52,142)]">
-      <div className="border border-black w-12 h-12 rounded-xl flex justify-center items-center">
-        {item.icon}
-      </div>
-      <p className='mt-[4px] text-[0.7rem]'>{item.label}</p>
-    </div>
-  ))}
-</div>
-      </div>
+
    <div
-  className={`${montserrat.variable} bg-[#8A348E] lg:mt-[-5px]  h-auto lg:h-[250px] flex items-center justify-center p-6`}
+  className={`${montserrat.variable} bg-[#8A348E] mt-[-5px]  h-auto lg:h-[250px] flex items-center justify-center p-6`}
 >
   <h1 className="text-white text-[20px] sm:text-[24px]   md:text-[28px] lg:text-[30px] font-semibold normal-case not-italic max-w-[90%] md:max-w-[500px] text-center leading-relaxed">
     Mining crypto is hard.<br />
@@ -77,9 +51,11 @@ export default function Home() {
       Breakthrough tech allows you to mine Pi on your 
       <br className="hidden sm:block" /> phone without draining your battery.
     </p>
-    <button className="font-sans font-semibold flex gap-2 items-center text-sm sm:text-base bg-[#8a348e] text-white w-full sm:w-auto py-2 px-4 rounded-md hover:bg-opacity-90 transition">
-      Learn The Tech Behind Pi <FaArrowRight className="text-white" />
-    </button>
+    <button className="font-sans font-semibold flex gap-2 items-center text-sm sm:text-base bg-[#8a348e] text-white w-full sm:w-auto py-2 px-4 sm:py-3 sm:px-6 rounded-md hover:bg-opacity-90 transition sm:rounded-lg sm:py-2 sm:px-4 md:w-auto md:py-3 md:px-5 lg:w-auto lg:py-4 lg:px-6 m-2">
+  Learn The Tech Behind Pi <FaArrowRight className="text-white" />
+</button>
+
+
   </div>
 
 

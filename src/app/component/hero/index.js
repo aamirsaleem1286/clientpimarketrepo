@@ -30,7 +30,7 @@ const Index = () => {
                 text-sm sm:text-base"
     >
       <Link
-        href="/wallet"
+        href="/pi-browser"
         className="flex items-center gap-2 sm:gap-4 w-full justify-center"
       >
         Activate by Pi-Market <FaArrowCircleDown size={28} />

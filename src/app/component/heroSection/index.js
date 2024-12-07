@@ -68,7 +68,6 @@ export default function Home() {
   </h1>
 </div>
 
-
 <section className="flex flex-col-reverse md:flex-row items-center justify-around  px-4 sm:px-8 lg:px-16 py-6">
   <div className="md:w-1/2 space-y-6 text-center md:text-left">
     <h1 className="font-sans font-semibold text-[#8a348e] text-[32px] sm:text-[40px] lg:text-[54px] leading-[1.2]">

@@ -70,7 +70,6 @@ export default function Home() {
 
 
 <section className="flex flex-col-reverse md:flex-row items-center justify-around min-h-screen px-4 sm:px-8 lg:px-16 py-6">
-  {/* Left Section */}
   <div className="md:w-1/2 space-y-6 text-center md:text-left">
     <h1 className="font-sans font-semibold text-[#8a348e] text-[32px] sm:text-[40px] lg:text-[54px] leading-[1.2]">
       Pi makes crypto mining easy.
@@ -84,10 +83,10 @@ export default function Home() {
     </button>
   </div>
 
-  {/* Right Section */}
+
   <div className="md:w-1/2 mt-8 md:mt-0 flex justify-center">
     <Image
-      src="/coin.PNG" // Replace with your image path
+      src="/coin.PNG" 
       alt="Hero Image"
       width={500}
       height={300}
@@ -96,8 +95,6 @@ export default function Home() {
   </div>
 </section>
 
-
-      {/* Cards Section */}
       <div className='bg-slate-100'>
       <section className="flex flex-col md:flex-row justify-center items-center gap-6 md:gap-8 lg:gap-12 py-12 px-4 sm:px-8">
   <Card
@@ -118,12 +115,10 @@ export default function Home() {
 </section>
 
 
-{/* New Hero Section with Image on the Left and Text on the Right */}
 <section className="flex flex-col md:flex-row items-center justify-between bg-[#8A348E] bg-gradient-to-r from-[#8A348E] to-[#423F88] opacity-100 py-12 px-6 md:px-16">
-  {/* Left Image */}
   <div className="flex justify-center w-full md:w-1/2 mb-6 md:mb-0">
     <Image
-      src="/mobile.PNG" // Replace with your image path
+      src="/mobile.PNG" 
       alt="Hero Image"
       width={300}
       height={200}
@@ -131,7 +126,6 @@ export default function Home() {
     />
   </div>
 
-  {/* Right Text */}
   <div className="w-full md:w-1/2 text-center md:text-left space-y-6 px-4 sm:px-8 lg:px-12">
     <h2 className="text-[24px] sm:text-[30px] lg:text-[35px] text-[#f4af47] leading-tight">
       Download the mobile <br className="hidden sm:block" /> app to start mining

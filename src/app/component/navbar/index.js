@@ -26,9 +26,8 @@ const Navbar = () => {
 
   return (
     <nav
-      className={`fixed top-0 left-0 w-full px-6 py-4 flex items-center justify-between md:justify-around shadow-md ${
-        scrolled ? "bg-[#8a348e] text-white" : "text-white"
-      } transition-colors duration-300 z-50`}
+      className={`fixed top-0 left-0 w-full px-6 py-4 flex items-center justify-between md:justify-around shadow-md 
+      transition-colors duration-300 z-50`}
     >
       {/* Logo */}
       <div className="text-2xl font-bold">
@@ -52,7 +51,7 @@ const Navbar = () => {
           onMouseEnter={() => setDropdown((prev) => ({ ...prev, blockchain: true }))}
           onMouseLeave={() => setDropdown((prev) => ({ ...prev, blockchain: false }))}
         >
-          <button className="flex items-center hover:text-white hover:underline hover:underline-offset-4 px-4 py-2 rounded">
+          <button className="flex items-center  text-[#cbd5e1] hover:underline hover:underline-offset-4 px-4 py-2 rounded">
             Pi Blockchain <FaChevronDown className="ml-2" />
           </button>
           {dropdown.blockchain && (
@@ -76,7 +75,7 @@ const Navbar = () => {
           onMouseEnter={() => setDropdown((prev) => ({ ...prev, developers: true }))}
           onMouseLeave={() => setDropdown((prev) => ({ ...prev, developers: false }))}
         >
-          <button className="flex items-center hover:text-white hover:underline hover:underline-offset-4 px-4 py-2 rounded">
+          <button className="flex items-center text-[#cbd5e1] hover:underline hover:underline-offset-4 px-4 py-2 rounded">
             Developers <FaChevronDown className="ml-2" />
           </button>
           {dropdown.developers && (
@@ -100,7 +99,7 @@ const Navbar = () => {
           onMouseEnter={() => setDropdown((prev) => ({ ...prev, community: true }))}
           onMouseLeave={() => setDropdown((prev) => ({ ...prev, community: false }))}
         >
-          <button className="flex items-center hover:text-white hover:underline hover:underline-offset-4 px-4 py-2 rounded">
+          <button className="flex items-center text-[#cbd5e1] hover:underline hover:underline-offset-4 px-4 py-2 rounded">
             Community <FaChevronDown className="ml-2" />
           </button>
           {dropdown.community && (
@@ -119,13 +118,13 @@ const Navbar = () => {
         </div>
 
         {/* Other Links */}
-        <a href="#" className="text-white hover:underline px-4 py-2 rounded">
+        <a href="#" className="text-[#cbd5e1] hover:underline px-4 py-2 rounded">
           About Us
         </a>
-        <a href="#" className="text-white hover:underline px-4 py-2 rounded">
+        <a href="#" className="text-[#cbd5e1] hover:underline px-4 py-2 rounded">
           Support
         </a>
-        <a href="#" className="text-white hover:underline px-4 py-2 rounded">
+        <a href="#" className="text-[#cbd5e1] hover:underline px-4 py-2 rounded">
           Contact
         </a>
       </div>

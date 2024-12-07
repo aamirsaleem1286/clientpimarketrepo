@@ -59,7 +59,7 @@ export default function Home() {
 </div>
       </div>
    <div
-  className={`${montserrat.variable} bg-[#8A348E]  h-auto lg:h-[250px] flex items-center justify-center p-6`}
+  className={`${montserrat.variable} bg-[#8A348E] lg:mt-[-5px]  h-auto lg:h-[250px] flex items-center justify-center p-6`}
 >
   <h1 className="text-white text-[20px] sm:text-[24px]   md:text-[28px] lg:text-[30px] font-semibold normal-case not-italic max-w-[90%] md:max-w-[500px] text-center leading-relaxed">
     Mining crypto is hard.<br />
@@ -69,7 +69,7 @@ export default function Home() {
 </div>
 
 
-<section className="flex flex-col-reverse md:flex-row items-center justify-around min-h-screen px-4 sm:px-8 lg:px-16 py-6">
+<section className="flex flex-col-reverse md:flex-row items-center justify-around  px-4 sm:px-8 lg:px-16 py-6">
   <div className="md:w-1/2 space-y-6 text-center md:text-left">
     <h1 className="font-sans font-semibold text-[#8a348e] text-[32px] sm:text-[40px] lg:text-[54px] leading-[1.2]">
       Pi makes crypto mining easy.
@@ -88,8 +88,8 @@ export default function Home() {
     <Image
       src="/coin.PNG" 
       alt="Hero Image"
-      width={400}
-      height={380}
+      width={350}
+      height={320}
       className="rounded-lg object-contain"
     />
   </div>

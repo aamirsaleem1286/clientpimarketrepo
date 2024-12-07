@@ -13,7 +13,9 @@ const Index = () => {
       }}
     >
       {/* Left Content */}
-      <div className="lg:w-[700px] mx-auto flex flex-col justify-center gap-15px sm:p-6 md:p-8">
+      <div
+  className="lg:w-[700px] mx-auto flex flex-col justify-center gap-[15px] sm:p-6 md:p-8 animate-slide-in-left"
+>
   <h1 className="text-2xl sm:text-3xl font-bold" style={{ marginTop: "60px" }}>
     Pioneer 2 Pioneer Marketplace
   </h1>
@@ -36,6 +38,7 @@ const Index = () => {
     </button>
   </div>
 </div>
+
 
 
 

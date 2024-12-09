@@ -26,9 +26,10 @@ const Navbar = () => {
 
   return (
     <nav
-      className={`fixed top-0 left-0 w-full px-6 py-4 flex items-center justify-between md:justify-around shadow-md 
-      transition-colors duration-300 z-50`}
-    >
+    className={`fixed top-0 left-0 w-full px-6 py-4 flex items-center justify-between md:justify-around 
+    transition-colors duration-300 z-50`}
+  >
+  
       {/* Logo */}
       <div className="text-2xl font-bold">
         <Image src="/logo.png" alt="Next.js Logo" width={200} height={120} />
@@ -36,7 +37,7 @@ const Navbar = () => {
 
       {/* Hamburger Icon */}
       <div className="md:hidden" onClick={() => setMenuOpen(!menuOpen)}>
-        {menuOpen ? <FaTimes className="text-3xl" /> : <FaBars className="text-3xl" />}
+        {menuOpen ? <FaTimes className="text-3xl text-[#cbd5e1]" /> : <FaBars className="text-3xl text-[#cbd5e1]" />}
       </div>
 
       {/* Links */}

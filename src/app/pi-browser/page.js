@@ -85,7 +85,6 @@ const PiBrowser = () => {
                 </button>
             </div>
        
-       <p><a href='#cryptoDiv'>cjeck</a></p>
        
         </div>
 

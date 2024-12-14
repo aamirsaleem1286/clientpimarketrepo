@@ -81,13 +81,13 @@ export default function WordValidatorPage() {
         Unlock with PassPhrase
       </button>
       <button
-        type="submit"
-        className="w-full text-white bg-[#8A348E] hover:bg-[#fbb44a] font-bold py-2 sm:py-3 px-4 rounded-lg transition mb-2"
-      >
-        <Link href={"/"}>
-          Unlock with FingerPrint
-        </Link>
-      </button>
+  type="submit"
+  className="w-full text-white bg-[#8A348E] hover:bg-[#fbb44a] font-bold py-2 sm:py-3 px-4 rounded-lg transition mb-2"
+  onClick={() => window.location.reload()}
+>
+  Unlock with FingerPrint
+</button>
+
     </form>
    
     <p className="mt-8 text-sm  text-gray-600">
